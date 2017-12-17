@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B3BE2008-4D5C-4850-A926-C0D06F42FF59}</ProjectGuid>
+    <RootNamespace>reconstruction</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\libraries\libfreenect2\include;C:\libraries\libfreenect2\build;C:\libraries\InfiniTAM\InfiniTAM;C:\libraries\opencv\build\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include;C:\Program Files\PCL 1.8.0\include\pcl-1.8;C:\Program Files\PCL 1.8.0\3rdParty\Eigen\eigen3;C:\libraries\boost_1_64_0;C:\Program Files\PCL 1.8.0\3rdParty\FLANN\include;C:\libraries\gmmreg\C++;C:\libraries\vxl\core;C:\libraries\vxl\build\core;C:\libraries\vxl\vcl;C:\libraries\vxl\build\vcl</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Horia\Documents\reconstruction\x64\Debug;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib;C:\libraries\libfreenect2\build\lib\Debug;C:\libraries\opencv\build\x64\vc14\lib;C:\libraries\InfiniTAM\build\ITMLib\Debug;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64;C:\Program Files\PCL 1.8.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>nonrigid.lib;freenect2d.lib;ITMLib.lib;opencv_world320d.lib;libboost_thread-vc140-mt-gd-1_61.lib;libboost_system-vc140-mt-gd-1_61.lib;libboost_date_time-vc140-mt-gd-1_61.lib;libboost_chrono-vc140-mt-gd-1_61.lib;libboost_filesystem-vc140-mt-gd-1_61.lib;libboost_iostreams-vc140-mt-gd-1_61.lib;pcl_common_debug.lib;pcl_filters_debug.lib;pcl_features_debug.lib;pcl_search_debug.lib;pcl_surface_debug.lib;pcl_io_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libboost_thread-vc140-mt-gd-1_64.lib;libboost_system-vc140-mt-gd-1_64.lib;libboost_date_time-vc140-mt-gd-1_64.lib;libboost_chrono-vc140-mt-gd-1_64.lib;libboost_filesystem-vc140-mt-gd-1_64.lib;libboost_iostreams-vc140-mt-gd-1_64.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <OutputFile>C:\Users\Horia\Documents\reconstruction\x64\Debug\reconstruction.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\libraries\libfreenect2\build\install\include;C:\libraries\InfiniTAM\InfiniTAM;C:\libraries\opencv\build\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include;C:\Program Files\PCL 1.8.0\include\pcl-1.8;C:\Program Files\PCL 1.8.0\3rdParty\Eigen\eigen3;C:\libraries\boost_1_64_0;C:\Program Files\PCL 1.8.0\3rdParty\FLANN\include;C:\libraries\libfreenect2\include;C:\libraries\libfreenect2\build</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\libraries\opencv\build\x64\vc14\lib;C:\libraries\InfiniTAM\build\ITMLib\RelWithDebInfo;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib;C:\Program Files\PCL 1.8.0\lib;C:\libraries\libfreenect2\build\lib\RelWithDebInfo;C:\Users\Horia\Documents\reconstruction\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freenect2.lib;ITMLib.lib;opencv_world320.lib;nonrigid.lib;libboost_thread-vc140-mt-1_61.lib;libboost_system-vc140-mt-1_61.lib;libboost_date_time-vc140-mt-1_61.lib;libboost_chrono-vc140-mt-1_61.lib;libboost_filesystem-vc140-mt-1_61.lib;libboost_iostreams-vc140-mt-1_61.lib;pcl_common_release.lib;pcl_filters_release.lib;pcl_features_release.lib;pcl_search_release.lib;pcl_surface_release.lib;pcl_io_release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libboost_thread-vc140-mt-1_64.lib;libboost_system-vc140-mt-1_64.lib;libboost_date_time-vc140-mt-1_64.lib;libboost_chrono-vc140-mt-1_64.lib;libboost_filesystem-vc140-mt-1_64.lib;libboost_iostreams-vc140-mt-1_64.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <OutputFile>C:\Users\Horia\Documents\reconstruction\x64\Release\reconstruction.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="rAlignmentEngine.h" />
+    <ClInclude Include="rCalibration.h" />
+    <ClInclude Include="rCameraFactory.h" />
+    <ClInclude Include="rCameraMatrix.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rFrame.h" />
+    <ClInclude Include="rCamera.h" />
+    <ClInclude Include="rFreenect2Camera.h" />
+    <ClInclude Include="rFreenect2CameraFactory.h" />
+    <ClInclude Include="rFreenect2Frame.h" />
+    <ClInclude Include="rFreenect2FrameListener.h" />
+    <ClInclude Include="rFreenect2Registration.h" />
+    <ClInclude Include="rFusionEngine.h" />
+    <ClInclude Include="rInfinitamFusionEngine.h" />
+    <ClInclude Include="rMainEngine.h" />
+    <ClInclude Include="rMatrix.h" />
+    <ClInclude Include="rOutlierRemoval.h" />
+    <ClInclude Include="rRegistration.h" />
+    <ClInclude Include="rTransformationMatrix.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rAlignmentEngine.cpp" />
+    <ClCompile Include="rCalibration.cpp" />
+    <ClCompile Include="rCamera.cpp" />
+    <ClCompile Include="rCameraFactory.cpp" />
+    <ClCompile Include="rCameraMatrix.cpp" />
+    <ClCompile Include="rFreenect2Camera.cpp" />
+    <ClCompile Include="rFreenect2CameraFactory.cpp" />
+    <ClCompile Include="rFreenect2Frame.cpp" />
+    <ClCompile Include="rFrame.cpp" />
+    <ClCompile Include="rFreenect2FrameListener.cpp" />
+    <ClCompile Include="rFreenect2Registration.cpp" />
+    <ClCompile Include="rFusionEngine.cpp" />
+    <ClCompile Include="rInfinitamFusionEngine.cpp" />
+    <ClCompile Include="rMainEngine.cpp" />
+    <ClCompile Include="rMatrix.cpp" />
+    <ClCompile Include="rOutlierRemoval.cpp" />
+    <ClCompile Include="rRegistration.cpp" />
+    <ClCompile Include="rTransformationMatrix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="reconstruction.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
